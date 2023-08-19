@@ -1,2 +1,1 @@
-# UI-slasher
-Welcome to UI Slasher
+# Welcome to UI Slasher
