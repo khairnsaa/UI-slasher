@@ -22,10 +22,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 2em;
-}
-
-.item {
-  grid-column: 2/3;
+  gap: 1em;
 }
 
 .item img {

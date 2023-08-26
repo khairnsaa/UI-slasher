@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 90vw;
+  background-color: white;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  height: 10rem;
+  width: 100%;
+  background-image: url("http://www.onegirl-oneworld.com/wp-content/uploads/2022/02/best-chanel-perfume-gabrielle-scaled.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.category {
+  color: #696969;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.product-title {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.product-description {
+  color: #757575;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.new-price {
+  color: hsl(158, 36%, 37%);
+  margin: 1rem 0;
+  margin-right: 0.8rem;
+}
+
+.old-price {
+  color: #696969;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+.btn {
+  color: white;
+  background-color: hsl(158, 36%, 37%);
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.btn img {
+  margin-right: 0.5rem;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.icon-cart {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 40vw;
+    display: flex;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+    background-image: url("http://www.onegirl-oneworld.com/wp-content/uploads/2022/02/best-chanel-perfume-gabrielle-scaled.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category {
+    margin-top: 0.5rem;
+  }
+
+  .product-title {
+    margin: 1rem 0;
+    max-width: 11ch;
+  }
+
+  .product-description {
+    max-width: 25rem;
+  }
+
+  .card-body {
+    padding: 1rem 2rem;
+  }
+}
