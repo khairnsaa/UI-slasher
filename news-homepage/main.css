@@ -17,17 +17,79 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.hamburger-menu {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .mobile-menu {
-  width: 2em;
+  display: block;
+  width: 1.5em;
   height: 0.15em;
   background-color: black;
   margin: 0.2rem 0;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu::before,
+.mobile-menu::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu::before {
+  top: 5px;
+}
+.mobile-menu::after {
+  top: -5px;
+}
+.mobile-menu.active::before {
+  top: 0;
+  rotate: -40deg;
+}
+.mobile-menu.active::after {
+  top: 0;
+  rotate: 40deg;
+}
+.mobile-menu.active {
+  background: transparent;
+}
+
+menu {
+  display: block;
+  position: relative;
 }
 
 .desktop-menu {
-  display: none;
+  position: absolute;
+  top: 2em;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
+.desktop-menu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 1rem 0;
+}
+.desktop-menu.active {
+  width: 60vw;
+  padding: 2em;
+}
 /* ------------------- #content ------------------- */
 
 #content {
@@ -124,7 +186,7 @@ nav {
   font-size: 1em;
 }
 
-@media only screen and (min-width: 475px) {
+@media only screen and (min-width: 1024px) {
   nav {
     padding: 1em 0;
     width: 80vw;
@@ -137,8 +199,11 @@ nav {
 
   .desktop-menu {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 40vw;
+    height: auto;
+    top: 0;
   }
 
   a {
