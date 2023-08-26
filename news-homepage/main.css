@@ -22,7 +22,7 @@ nav {
   position: relative;
   cursor: pointer;
   display: inline-block;
-  background-color: orange;
+  background: transparent;
 }
 
 .mobile-menu {
